@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -6,11 +5,9 @@ import styles from "./page.module.css";
 import ProductItem from "../../components/Productitem";
 import data from "./utils.js/data";
 
-
 export default function Home(inter) {
   return (
     <main className={styles.main}>
-      
       <div className={styles.CatWrap}>
         <div className={styles.cat}>
           <Link href="/Contact">Electronic</Link>
@@ -24,9 +21,7 @@ export default function Home(inter) {
         <div className={styles.cat}>
           <Link href="/Contact">Fitness</Link>
         </div>
-        <div className={styles.moreCat}>
-          
-        </div>
+        <div className={styles.moreCat}></div>
       </div>
 
       <div className={styles.under}>

@@ -10,8 +10,6 @@ import ActiveLink from "./ActiveLink";
 export default function Nav() {
   const [isMobile, setIsMobile] = useState(false);
 
-  
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 627);
@@ -36,6 +34,8 @@ export default function Nav() {
         display: "flex",
         alignItems: "center",
         boxShadow: "inset 0 -1px #333",
+        backdropFilter: "blur(1px)",
+        backdropFilter: "blur(2px)",
       }}
     >
       <nav
