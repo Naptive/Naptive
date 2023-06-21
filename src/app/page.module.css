@@ -71,10 +71,7 @@
 .B{
   cursor: pointer;
 }
-.SearchIcon{
-  max-width: 18px;
-  height: auto;
-}
+
 .SignUp{
  width: 90px;
  height: 34px;
@@ -105,7 +102,7 @@
   gap: 20px;
   
 }
-.activeLink{
+.active{
   color: #ffffff;
   height: 30px;
   display: block;

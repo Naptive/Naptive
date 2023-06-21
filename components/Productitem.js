@@ -46,10 +46,12 @@ export default function ProductItem({ product }) {
       <div
         style={{
           width: "100%",
-          height: "60px",
+          minHeight: "70px",
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          alignItems:"space-between",
+          justifyContent:"start",
+          gap:"5px",
           padding: "5px",
         }}
       >
@@ -79,7 +81,7 @@ export default function ProductItem({ product }) {
             
             }}>
             {product.brand}</p>
-          <p style={{ marginBottom: "2px", fontWeight: "200" }}>
+          <p style={{ marginBottom: "2px", fontWeight: "200",marginLeft:"99%" }}>
             R{product.price}
           </p>
         </div>
