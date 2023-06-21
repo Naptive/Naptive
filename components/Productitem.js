@@ -33,6 +33,7 @@ export default function ProductItem({ product }) {
           <Image
             src={product.image}
             alt={product.name}
+            priority
             height={130}
             width={160}
             objectFit="cover"
@@ -45,11 +46,11 @@ export default function ProductItem({ product }) {
       <div
         style={{
           width: "100%",
+          height: "60px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           padding: "5px",
-          borderTop: "1px solid white",
         }}
       >
         <Link href={`/product/${product.slug}`} passHref>
