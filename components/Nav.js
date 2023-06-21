@@ -36,6 +36,7 @@ export default function Nav() {
         boxShadow: "inset 0 -1px #333",
         backdropFilter: "blur(1px)",
         backdropFilter: "blur(2px)",
+        backgroundColor:"rgba(0, 0, 0, 0.638)"
       }}
     >
       <nav
