@@ -8,7 +8,8 @@ export default function ProductItem({ product }) {
   return (
     <div
       style={{
-        boxShadow: "0 2px 2px 0 rgba(255, 255, 255, 0.08), 0 0 2px 0 rgba(255, 255, 255, 0.16)",
+        boxShadow:
+          "0 2px 2px 0 rgba(255, 255, 255, 0.08), 0 0 2px 0 rgba(255, 255, 255, 0.16)",
         height: "90%",
         width: "90%",
         maxWidth: "160px",
@@ -18,18 +19,20 @@ export default function ProductItem({ product }) {
         alignItems: "start",
         justifyContent: "center",
         overflow: "hidden",
-        backgroundColor: "black"
+        backgroundColor: "black",
       }}
     >
       <Link href={`/product/${product.slug}`} passHref>
-        <div style={{ 
-          cursor: 'pointer',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent:'center',
-          height: '100%',
-          width: '100%',
-           }}>
+        <div
+          style={{
+            cursor: "pointer",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100%",
+            width: "100%",
+          }}
+        >
           <Image
             src={product.image}
             alt={product.name}
@@ -37,7 +40,6 @@ export default function ProductItem({ product }) {
             height={130}
             width={160}
             objectFit="cover"
-            
             style={{}}
           />
         </div>
@@ -49,20 +51,24 @@ export default function ProductItem({ product }) {
           minHeight: "70px",
           display: "flex",
           flexDirection: "column",
-          alignItems:"space-between",
-          justifyContent:"start",
-          gap:"5px",
+          alignItems: "space-between",
+          justifyContent: "start",
+          gap: "5px",
           padding: "5px",
         }}
       >
         <Link href={`/product/${product.slug}`} passHref>
-          <div style={{ cursor: 'pointer' }}>
-            <p style={{
-              whiteSpace: 'nowrap',
-              width: '100px',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis', 
-            }}>{product.name}</p>
+          <div style={{ cursor: "pointer" }}>
+            <p
+              style={{
+                whiteSpace: "nowrap",
+                width: "100px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              {product.name}
+            </p>
           </div>
         </Link>
 
@@ -73,15 +79,21 @@ export default function ProductItem({ product }) {
             justifyContent: "space-between",
           }}
         >
-          <p style={{ 
-            
-            marginBottom: "2px", 
-            fontWeight: "100",
-            
-            
-            }}>
-            {product.brand}</p>
-          <p style={{ marginBottom: "2px", fontWeight: "200",marginLeft:"99%" }}>
+          <p
+            style={{
+              marginBottom: "2px",
+              fontWeight: "100",
+            }}
+          >
+            {product.brand}
+          </p>
+          <p
+            style={{
+              marginBottom: "2px",
+              fontWeight: "200",
+              marginLeft: "99%",
+            }}
+          >
             R{product.price}
           </p>
         </div>
