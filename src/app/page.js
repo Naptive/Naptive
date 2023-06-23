@@ -4,6 +4,7 @@ import React from "react";
 import styles from "./page.module.css";
 import ProductItem from "../../components/Productitem";
 import data from "./utils.js/data";
+import RootLayout from "./layout";
 
 export default function Home(inter) {
   return (
@@ -31,7 +32,7 @@ export default function Home(inter) {
 
       <div className={styles.Products}>
         {data.products.map((products) => (
-          <ProductItem product={products} key={products.slug}></ProductItem>
+          <ProductItem product={products} key={products.id}></ProductItem>
         ))}
       </div>
     </main>

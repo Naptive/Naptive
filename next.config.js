@@ -3,7 +3,8 @@
 const nextConfig = {
     images: {
       domains: ['images.unsplash.com',
-      'media.takealot.com'
+      'media.takealot.com',
+      'fakestoreapi.com'
     ],
     },
   };

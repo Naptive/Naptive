@@ -17,12 +17,12 @@ export default function ProductItem({ product }) {
         display: "flex",
         flexDirection: "column",
         alignItems: "start",
-        justifyContent: "center",
+        justifyContent: "end",
         overflow: "hidden",
-        backgroundColor: "black",
+        backgroundColor: "white",
       }}
     >
-      <Link href={`/product/${product.slug}`} passHref>
+      <Link href={`/product/${product.id}`} passHref>
         <div
           style={{
             cursor: "pointer",
@@ -37,10 +37,9 @@ export default function ProductItem({ product }) {
             src={product.image}
             alt={product.name}
             priority
+            loading="eager"
             height={130}
             width={160}
-            objectFit="cover"
-            style={{}}
           />
         </div>
       </Link>
@@ -48,16 +47,18 @@ export default function ProductItem({ product }) {
       <div
         style={{
           width: "100%",
-          minHeight: "70px",
+          minHeight: "60px",
+          maxHeight:"60px",
           display: "flex",
           flexDirection: "column",
           alignItems: "space-between",
+          backgroundColor:"black",
           justifyContent: "start",
           gap: "5px",
-          padding: "5px",
+          padding: "3px 10px",
         }}
       >
-        <Link href={`/product/${product.slug}`} passHref>
+        <Link href={`/product/${product.title}`} passHref>
           <div style={{ cursor: "pointer" }}>
             <p
               style={{
@@ -75,23 +76,23 @@ export default function ProductItem({ product }) {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
+            flexDirection: "column",
+            justifyContent: "start",
+            gap: "3px",
+            height: "100%",
           }}
         >
-          <p
-            style={{
-              marginBottom: "2px",
-              fontWeight: "100",
-            }}
-          >
-            {product.brand}
-          </p>
+          <h5 style={{fontWeight:"300",overflow: "hidden", whiteSpace: "nowrap",textOverflow: "ellipsis",width:"100%" }}>
+            {product.title}
+          </h5>
+          
           <p
             style={{
               marginBottom: "2px",
               fontWeight: "200",
-              marginLeft: "99%",
+              textAlign:"end",
+              fontSize: "12px",
+              padding:"5px",
             }}
           >
             R{product.price}
