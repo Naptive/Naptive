@@ -16,7 +16,7 @@ export default function ProductItem({ product }) {
         borderRadius: "8px",
         display: "flex",
         flexDirection: "column",
-        alignItems: "start",
+        alignItems: "center",
         justifyContent: "end",
         overflow: "hidden",
         backgroundColor: "white",
@@ -29,17 +29,19 @@ export default function ProductItem({ product }) {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: "100%",
-            width: "100%",
+            height: "185px",
+            minWidth: "100%",
+            
           }}
         >
           <Image
             src={product.image}
             alt={product.name}
-            priority
-            loading="eager"
-            height={130}
-            width={160}
+            loading="lazy"
+            height={110}
+            width={120}
+            style={{objectFit:"contain"}}
+            
           />
         </div>
       </Link>

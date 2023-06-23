@@ -81,7 +81,7 @@ export default function Nav(useRouter) {
             <a>Cart</a>
           </Link>
           <Link href={'/Cart'} legacyBehavior>
-          <a>Log in</a>
+          <a style={{whiteSpace: "nowrap"}}>Log in</a>
           </Link>
         </nav>
       )}
@@ -99,6 +99,8 @@ export default function Nav(useRouter) {
           style={{ maxWidth: "18px", height: "auto", marginLeft: "25px" }}
           src={search}
           alt="Picture of the author"
+          priority
+          loading="eager"
         />
 
         <button
