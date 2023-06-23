@@ -5,11 +5,8 @@ import Link from "next/link";
 import logo from "../public/Naptive.svg";
 import search from "../public/search.svg";
 
-import ActiveLink from "./ActiveLink";
-
-export default function Nav() {
+export default function Nav(useRouter) {
   const [isMobile, setIsMobile] = useState(false);
-
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 627);
@@ -22,7 +19,6 @@ export default function Nav() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
   return (
     <header
       style={{
@@ -35,8 +31,8 @@ export default function Nav() {
         alignItems: "center",
         boxShadow: "inset 0 -1px #333",
         backdropFilter: "blur(1px)",
-        backdropFilter: "blur(2px)",
-        backgroundColor:"rgba(0, 0, 0, 0.638)"
+        backdropFilter: "blur(4px)",
+        backgroundColor: "rgba(0, 0, 0, 0.638)",
       }}
     >
       <nav
@@ -55,6 +51,8 @@ export default function Nav() {
               marginLeft: isMobile ? "10px" : "0px",
             }}
             src={logo}
+            loading="eager"
+            priority
             alt="Picture of the author"
           />
         </div>
@@ -76,8 +74,15 @@ export default function Nav() {
             color: "#b0b0b0",
           }}
         >
-          <ActiveLink>Home</ActiveLink>
-          <ActiveLink>About</ActiveLink>
+          <Link href={'/'} legacyBehavior>
+            <a>Home</a>
+          </Link>
+          <Link href={'/Cart'} legacyBehavior>
+            <a>Cart</a>
+          </Link>
+          <Link href={'/Cart'} legacyBehavior>
+          <a>Log in</a>
+          </Link>
         </nav>
       )}
 
