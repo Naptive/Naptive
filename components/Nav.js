@@ -103,22 +103,11 @@ export default function Nav(useRouter) {
           loading="eager"
         />
 
-        <button
-          style={{
-            minWidth: "90px",
-            height: "34px",
-            fontSize: "14px",
-            fontWeight: 400,
-            backgroundColor: "white",
-            color: "black",
-            border: "none",
-            borderRadius: "8px",
-            marginLeft: "18px",
-            marginRight: "10px",
-          }}
-        >
-          Sign Up
-        </button>
+        <Link href={"/Login"} legacyBehavior>
+        <a className="bg-white w-[90px] h-[34px] ml-[18px] mr-[10px] font-light text-[14px] antialiased text-black text-center flex items-center rounded-lg">
+         <p className="w-full">Sign Up</p>
+        </a>
+        </Link>
       </nav>
     </header>
   );

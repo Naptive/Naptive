@@ -121,7 +121,7 @@
   width: 100vw;
   min-width: 54px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   backdrop-filter: blur(1px);
   backdrop-filter: blur(4px);

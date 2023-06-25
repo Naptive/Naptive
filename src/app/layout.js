@@ -16,7 +16,7 @@ export default function RootLayout({ title, children }) {
     <html lang="en">
       
       <body>
-        <Nav />
+      <Nav/>
         {children}
         
         <Analytics />

@@ -4,7 +4,8 @@ const nextConfig = {
     images: {
       domains: ['images.unsplash.com',
       'media.takealot.com',
-      'fakestoreapi.com'
+      'fakestoreapi.com',
+      'img.freepik.com'
     ],
     },
   };

@@ -6,7 +6,7 @@ import more from "../public/more-vertical.svg";
 
 export default function ProductItem({ product }) {
   return (
-    <div
+    <div  
       style={{
         boxShadow:
           "0 2px 2px 0 rgba(255, 255, 255, 0.08), 0 0 2px 0 rgba(255, 255, 255, 0.16)",
@@ -20,6 +20,7 @@ export default function ProductItem({ product }) {
         justifyContent: "end",
         overflow: "hidden",
         backgroundColor: "white",
+        margin:"0px",
       }}
     >
       <Link href={`/product/${product.id}`} passHref>
@@ -40,7 +41,7 @@ export default function ProductItem({ product }) {
             loading="lazy"
             height={110}
             width={120}
-            style={{objectFit:"contain"}}
+            className="object-contain pointer-events-none"
             
           />
         </div>
@@ -102,5 +103,6 @@ export default function ProductItem({ product }) {
         </div>
       </div>
     </div>
+    
   );
 }
