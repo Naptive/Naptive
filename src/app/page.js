@@ -1,12 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import styles from "./page.module.css";
 import ProductItem from "../../components/Productitem";
 import data from "./utils.js/data";
-import RootLayout from "./layout";
 
-export default function Home(inter) {
+export default async function Home(inter) {
   return (
     <main className={styles.main}>
       <div className={styles.CatWrap}>
