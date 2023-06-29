@@ -8,7 +8,7 @@ function Help() {
         <div className="min-w-[100%] h-[100%] pt-[5em] flex gap-2">
             <div className="w-1/3 min-w-[230px] hidden h-full bg-black sm:block">
 
-            <h1 className="text-[30px] font-extralight px-3 py-3 flex items-end">Help
+            <h1 className="text-[30px] font-extralight px-3 py-3 flex items-end">Hel
             
             <Image alt="Question mark" src={Q} className="w-[0.58em] h-[0.58em] mb-2"/></h1>
             
