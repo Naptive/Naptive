@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import google from "/public/google.svg"
+import facebook from "/public/facebook.svg"
 
 function Login() {
   return (
@@ -12,7 +14,7 @@ function Login() {
          <div className="w-full md:w-2/4 h-full flex justify-center items-center flex-column md:border-[1px] md:border-white border-black">
            <div className="bg-pink-500 h-[140px] w-[10px] absolute z-[-1] animate-spin"> </div>
           <form className="h-max backdrop-blur-lg">
-          <h2 className="text-white antialiased text-center h-min mb-[20px]">Login</h2>
+          <h2 className="text-white antialiased text-center h-min mb-[20px]">Sign Up</h2>
             <div className="mb-[8px] w-[200px] ">
             <p className="text-white text-[12px] font-extralight">Email</p>
               <input className="bg-neutral-900 h-[35px] rounded-md focus:outline-none text-white text-[13px] w-full px-[8px]" 
@@ -29,12 +31,12 @@ function Login() {
             </div>
 
             <div>
-              <button className="text-black text-[13px] bg-white w-full h-[38px]  rounded-full">Log in</button>
-              <p className="text-neutral-700 mt-[5px] text-[12px]">Don't have an account <Link href={"/"}><span className="text-sky-500">Sign Up</span></Link></p>
+              <button className="text-black text-[13px] bg-white w-full h-[38px]  rounded-full">Create account</button>
+              <p className="text-neutral-700 mt-[5px] text-[12px]">Already have an account <Link href={"/auth/Login"}><span className="text-sky-500">Log in</span></Link></p>
             </div>
             <div className="flex items-center justify-evenly mt-[20px]">
-              <button><Image src={"google.svg"} width={37} height={37}alt="Google" /></button>
-            <button><Image src={"facebook.svg"} width={37} height={37}alt="Facebook" /></button>
+              <button><Image src={google} width={37} height={37}  priority alt="Google" /></button>
+            <button><Image src={facebook} width={37} height={37}  priority alt="Facebook" /></button>
             </div>
           </form>
          </div>

@@ -4,9 +4,10 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import more from "../public/more-vertical.svg";
 
-export default function ProductItem({ product }) {
+export default function ProductItem({ product }, inter) {
   return (
     <div  
+    className={inter}
       style={{
         boxShadow:
           "0 2px 2px 0 rgba(255, 255, 255, 0.08), 0 0 2px 0 rgba(255, 255, 255, 0.16)",
@@ -21,6 +22,7 @@ export default function ProductItem({ product }) {
         overflow: "hidden",
         backgroundColor: "white",
         margin:"0px",
+        
       }}
     >
       <Link href={`/product/${product.id}`} passHref>
@@ -41,7 +43,7 @@ export default function ProductItem({ product }) {
             loading="lazy"
             height={110}
             width={120}
-            className="object-contain pointer-events-none"
+            className="object-contain pointer-events-none active:bg-transparent"
             
           />
         </div>
@@ -59,6 +61,7 @@ export default function ProductItem({ product }) {
           justifyContent: "start",
           gap: "5px",
           padding: "3px 10px",
+          
         }}
       >
         <Link href={`/product/${product.title}`} passHref>

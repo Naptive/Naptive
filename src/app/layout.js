@@ -1,9 +1,13 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import Nav from "../../components/Nav"; 
+import Nav from "../../components/Nav";
+import { SessionProvider } from "next-auth/react";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Welcome to Naptive",
@@ -11,14 +15,14 @@ export const metadata = {
   content: "width=device-width, initial-scale=1.0",
 };
 
-export default function RootLayout({ title, children }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={inter} >
       
       <body>
-      <Nav/>
+        <Nav />
         {children}
-        
+
         <Analytics />
       </body>
     </html>

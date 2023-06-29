@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../public/Naptive.svg";
 import search from "../public/search.svg";
+import user from "../public/user.svg";
 
 export default function Nav(useRouter) {
   const [isMobile, setIsMobile] = useState(false);
@@ -44,17 +45,19 @@ export default function Nav(useRouter) {
         }}
       >
         <div>
-          <Image
-            style={{
-              width: isMobile ? "115px" : "130px",
-              height: isMobile ? "15.91px" : "18px",
-              marginLeft: isMobile ? "10px" : "0px",
-            }}
-            src={logo}
-            loading="eager"
-            priority
-            alt="Picture of the author"
-          />
+          <Link href={"/"}>
+            <Image
+              style={{
+                width: isMobile ? "115px" : "130px",
+                height: isMobile ? "15.91px" : "18px",
+                marginLeft: isMobile ? "10px" : "0px",
+              }}
+              src={logo}
+              loading="eager"
+              priority
+              alt="Picture of the author"
+            />
+          </Link>
         </div>
       </nav>
 
@@ -74,14 +77,14 @@ export default function Nav(useRouter) {
             color: "#b0b0b0",
           }}
         >
-          <Link href={'/'} legacyBehavior>
-            <a>Home</a>
+          <Link href={"/"} legacyBehavior>
+            <a className="hover:text-white">Home</a>
           </Link>
-          <Link href={'/Cart'} legacyBehavior>
-            <a>Cart</a>
+          <Link href={"/Cart"} legacyBehavior>
+            <a className="hover:text-white">Cart</a>
           </Link>
-          <Link href={'/Cart'} legacyBehavior>
-          <a style={{whiteSpace: "nowrap"}}>Log in</a>
+          <Link href={"/Help"} legacyBehavior>
+            <a className="hover:text-white whitespace-nowrap">Help</a>
           </Link>
         </nav>
       )}
@@ -103,10 +106,15 @@ export default function Nav(useRouter) {
           loading="eager"
         />
 
-        <Link href={"/Login"} legacyBehavior>
-        <a className="bg-white w-[90px] h-[34px] ml-[18px] mr-[10px] font-light text-[14px] antialiased text-black text-center flex items-center rounded-lg">
-         <p className="w-full">Sign Up</p>
-        </a>
+        <Link href={"/auth/Login"} legacyBehavior>
+          <div className="cursor-pointer">
+            <Image
+              src={user}
+              className="ml-5 h-10 w-auto"
+              alt="Account icon"
+              priority
+            />
+          </div>
         </Link>
       </nav>
     </header>

@@ -1,4 +1,4 @@
-import data from "@/app/utils.js/data";
+import data from "../../utils.js/data";
 import Image from "next/image";
 import React from "react";
 

@@ -4,7 +4,8 @@ import styles from "./page.module.css";
 import ProductItem from "../../components/Productitem";
 import data from "./utils.js/data";
 
-export default async function Home(inter) {
+export default async function Home() {
+  
   return (
     <main className={styles.main}>
       <div className={styles.CatWrap}>
@@ -35,4 +36,5 @@ export default async function Home(inter) {
       </div>
     </main>
   );
-}
+};
+
