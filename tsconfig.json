@@ -31,7 +31,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/app/createacount/firebase.config.js"  ],
+, "src/app/createacount/firebase.config.js", "src/app/page.js", "src/app/Help/page.js"  ],
   "exclude": [
     "node_modules"
   ]
