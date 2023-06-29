@@ -1,20 +1,18 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
 import more from "../public/more-vertical.svg";
+import Rating from "./Ratings";
 
 export default function ProductItem({ product }, inter) {
   return (
     <div  
     className={inter}
       style={{
-        boxShadow:
-          "0 2px 2px 0 rgba(255, 255, 255, 0.08), 0 0 2px 0 rgba(255, 255, 255, 0.16)",
         height: "90%",
         width: "90%",
-        maxWidth: "160px",
-        borderRadius: "8px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -52,15 +50,14 @@ export default function ProductItem({ product }, inter) {
       <div
         style={{
           width: "100%",
-          minHeight: "60px",
-          maxHeight:"60px",
+          minHeight: "70px",
+          maxHeight:"70px",
           display: "flex",
           flexDirection: "column",
           alignItems: "space-between",
           backgroundColor:"black",
           justifyContent: "start",
           gap: "5px",
-          padding: "3px 10px",
           
         }}
       >
@@ -80,29 +77,27 @@ export default function ProductItem({ product }, inter) {
         </Link>
 
         <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "start",
-            gap: "3px",
-            height: "100%",
-          }}
+          className="px-2 py-2 min-h-full flex flex-col gap-1"
         >
           <h5 style={{fontWeight:"300",overflow: "hidden", whiteSpace: "nowrap",textOverflow: "ellipsis",width:"100%" }}>
             {product.title}
           </h5>
-          
-          <p
-            style={{
-              marginBottom: "2px",
-              fontWeight: "200",
-              textAlign:"end",
-              fontSize: "12px",
-              padding:"5px",
-            }}
-          >
+          <div className="min-w-full flex justify-between">
+            <div className="w-2/4 sm:w-2/3 flex">
+              <Rating />
+              <Rating />
+              <Rating />
+              <Rating />
+              <Rating />
+
+            </div>
+          <div
+            className="w-2/4 sm:w-1/3 text-[15px] font-extralight"
+          > <p className="w-min">
             R{product.price}
-          </p>
+            </p>
+          </div>
+          </div>
         </div>
       </div>
     </div>
