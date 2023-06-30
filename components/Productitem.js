@@ -6,6 +6,7 @@ import styles from "./page.module.css";
 import more from "../public/more-vertical.svg";
 import Rating from "./Ratings";
 
+
 export default async function ProductItem({ product }, inter) {
   return (
     <div  

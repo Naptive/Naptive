@@ -8,7 +8,7 @@ function Rating() {
     width={15} 
     priority 
     height={15}
-    className="w-[10px] h-auto sm:w-[15px]"
+    className="w-[14px] h-auto sm:w-[15px]"
     
     />
     

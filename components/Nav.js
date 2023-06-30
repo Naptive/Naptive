@@ -5,6 +5,7 @@ import Link from "next/link";
 import logo from "../public/Naptive.svg";
 import search from "../public/search.svg";
 import user from "../public/user.svg";
+import Navlink from "./navlink"
 
 export default function Nav(useRouter) {
   const [isMobile, setIsMobile] = useState(false);
@@ -68,24 +69,15 @@ export default function Nav(useRouter) {
             right: "15em",
             width: "min-content",
             height: "64px",
-            fontWeight: "300",
-            fontSize: "14.5px",
             display: "flex",
             alignItems: "center",
             justifyContent: "end",
             gap: "20px",
-            color: "#b0b0b0",
           }}
         >
-          <Link href={"/"} legacyBehavior>
-            <a className="hover:text-white">Home</a>
-          </Link>
-          <Link href={"/Cart"} legacyBehavior>
-            <a className="hover:text-white">Cart</a>
-          </Link>
-          <Link href={"/Help"} legacyBehavior>
-            <a className="hover:text-white whitespace-nowrap">Help</a>
-          </Link>
+          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/"}><p>Home</p></Link>
+          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/Cart"}><p>Cart</p></Link>
+          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/Help"}><p>Help</p></Link>
         </nav>
       )}
 
