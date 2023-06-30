@@ -6,20 +6,22 @@ import styles from "./page.module.css";
 import more from "../public/more-vertical.svg";
 import Rating from "./Ratings";
 
-export default function ProductItem({ product }, inter) {
+export default async function ProductItem({ product }, inter) {
   return (
     <div  
     className={inter}
       style={{
-        height: "90%",
+        minHeight: "136px",
         width: "90%",
+        maxWidth:"233px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "end",
         overflow: "hidden",
         backgroundColor: "white",
-        margin:"0px",
+        marginLeft: "auto",
+        marginRight: "auto",
         
       }}
     >
@@ -38,7 +40,7 @@ export default function ProductItem({ product }, inter) {
           <Image
             src={product.image}
             alt={product.name}
-            loading="lazy"
+            loading="eager"
             height={110}
             width={120}
             className="object-contain pointer-events-none active:bg-transparent"
@@ -93,7 +95,7 @@ export default function ProductItem({ product }, inter) {
             </div>
           <div
             className="w-2/4 sm:w-1/3 text-[15px] font-extralight"
-          > <p className="w-min">
+          > <p className="w-full text-end">
             R{product.price}
             </p>
           </div>
