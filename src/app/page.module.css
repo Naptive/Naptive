@@ -2,8 +2,7 @@
   
     background-color: rgb(11, 11, 11);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    
   }
   .nav {
     backdrop-filter: blur(1px);
