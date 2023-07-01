@@ -5,7 +5,7 @@ import Link from "next/link";
 import logo from "../public/Naptive.svg";
 import search from "../public/search.svg";
 import user from "../public/user.svg";
-import Navlink from "./navlink"
+import Navlink from "./navlink";
 
 export default function Nav(useRouter) {
   const [isMobile, setIsMobile] = useState(false);
@@ -75,9 +75,24 @@ export default function Nav(useRouter) {
             gap: "20px",
           }}
         >
-          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/"}><p>Home</p></Link>
-          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/Cart"}><p>Cart</p></Link>
-          <Link className="font-light text-[14.3px] text-stone-400 antialiased hover:text-white" href={"/Help"}><p>Help</p></Link>
+          <Link
+            className="text-[14.3px] font-light text-stone-400 antialiased hover:text-white"
+            href={"/"}
+          >
+            <p>Home</p>
+          </Link>
+          <Link
+            className="text-[14.3px] font-light text-stone-400 antialiased hover:text-white"
+            href={"/Cart"}
+          >
+            <p>Cart</p>
+          </Link>
+          <Link
+            className="text-[14.3px] font-light text-stone-400 antialiased hover:text-white"
+            href={"/Help"}
+          >
+            <p>Help</p>
+          </Link>
         </nav>
       )}
 
@@ -90,14 +105,36 @@ export default function Nav(useRouter) {
           justifyContent: "flex-end",
         }}
       >
+        {" "}
+        <Link href={"/Help"}>
+          <Image
+            className="mr-1 h-auto max-w-[19px]"
+            src={"/Help.svg"}
+            alt="Help icon"
+            priority
+            loading="eager"
+            width={19}
+            height={19}
+          />
+        </Link>
+        <Link href={"/Cart"}>
+          <Image
+            className="mr-1 h-auto max-w-[18px]"
+            src={"/Cart.svg"}
+            alt="Picture of the author"
+            priority
+            loading="eager"
+            width={18}
+            height={18}
+          />
+        </Link>
         <Image
-          style={{ maxWidth: "18px", height: "auto", marginLeft: "25px" }}
+          style={{ maxWidth: "24px", height: "auto" }}
           src={search}
           alt="Picture of the author"
           priority
           loading="eager"
         />
-
         <Link href={"/auth/Login"} legacyBehavior>
           <div className="cursor-pointer">
             <Image

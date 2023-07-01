@@ -2,7 +2,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import Nav from "../../components/Nav";
-import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -17,7 +16,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className=""} >
+    <html lang="en" className={inter.className="font-inter"} >
       
       <body>
         <Nav />

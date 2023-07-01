@@ -3,8 +3,10 @@
         "Naptive",
         "Productitem",
         "Productscreen",
+        "Tolink",
         "adida",
         "extralight",
+        "scrollto",
         "tailwind",
         "tailwindcss"
     ],

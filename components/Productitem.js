@@ -5,16 +5,21 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import more from "../public/more-vertical.svg";
 import Rating from "./Ratings";
+import { Suspense } from 'react'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
+
 
 
 export default async function ProductItem({ product }, inter) {
   return (
+    
     <div  
     className={inter}
       style={{
         minHeight: "136px",
         width: "90%",
         maxWidth:"233px",
+        
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -27,6 +32,7 @@ export default async function ProductItem({ product }, inter) {
       }}
     >
       <Link href={`/product/${product.id}`} passHref>
+        <Suspense fallback={<Skeleton/>}>
         <div
           style={{
             cursor: "pointer",
@@ -37,20 +43,22 @@ export default async function ProductItem({ product }, inter) {
             minWidth: "100%",
             
           }}
-        >
+        > 
+        
           <Image
             src={product.image}
             alt={product.name}
             loading="eager"
             height={110}
             width={120}
-            className="object-contain pointer-events-none active:bg-transparent"
+            className="object-contain pointer-events-none active:bg-transparent"/>
             
-          />
         </div>
+        </Suspense>
       </Link>
 
       <div
+      className="bg-zinc-950"
         style={{
           width: "100%",
           minHeight: "70px",
@@ -58,7 +66,6 @@ export default async function ProductItem({ product }, inter) {
           display: "flex",
           flexDirection: "column",
           alignItems: "space-between",
-          backgroundColor:"black",
           justifyContent: "start",
           gap: "5px",
           
